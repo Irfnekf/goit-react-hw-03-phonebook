@@ -4,7 +4,9 @@ import css from './contactsList.module.css';
 const ContactsList = ({ removeContact, contacts }) => {
   const item = contacts.map(({ id, name, number }) => (
     <li className={css.contactItem} key={id}>
-      {name}: {number}
+      <p className={css.name}>
+        {name}: <span className={css.number}>{number}</span>
+      </p>
       <button
         className={css.deleteButton}
         onClick={() => removeContact(id)}
@@ -14,7 +16,7 @@ const ContactsList = ({ removeContact, contacts }) => {
       </button>
     </li>
   ));
-  return <ol>{item}</ol>;
+  return <ul>{item}</ul>;
 };
 
 ContactsList.propTypes = {

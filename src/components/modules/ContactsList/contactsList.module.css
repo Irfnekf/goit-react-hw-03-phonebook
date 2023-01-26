@@ -1,11 +1,51 @@
 .deleteButton {
-  margin-left: 20px;
+  position: absolute;
+  margin-top: 21px;
+  right: 30px;
+  border: 0;
+  color: #fff;
+  width: 6em;
+  text-align: center;
+  padding: 0.4em 0.5em;
+  border-radius: 100px;
+  border-top-left-radius: 0;
+  background-color: #75a85e;
+  cursor: pointer;
 }
-
-.contactItem {
-  margin-bottom: 5px;
+.deleteButton:hover {
+  color: #48494a;
 }
 
 .contactItem:last-of-type {
   margin-bottom: 0;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+.contactItem {
+  display: flex;
+  margin-bottom: 5px;
+  padding-left: 30px;
+}
+.name {
+  color: #75a85e;
+  font-size: 1.2em;
+}
+
+.number {
+  color: #fff;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.contactItem:hover {
+  cursor: pointer;
+  background-color: #48494a;
 }

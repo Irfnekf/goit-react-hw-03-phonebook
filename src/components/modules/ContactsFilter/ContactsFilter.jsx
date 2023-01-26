@@ -8,8 +8,9 @@ class ContactsFilter extends Component {
 
     return (
       <div className={css.searchWrapper}>
-        <label className={css.label}> Find contacts by name</label>
+        <label className={css.label}> Find contacts by name:</label>
         <input
+          placeholder="Search"
           value={filter}
           className={css.filterInput}
           name="filter"
