@@ -38,7 +38,7 @@ class Phonebook extends Component {
   };
 
   addContact = ({ name, number }) => {
-    if (this.isDublicate(name, number)) {
+    if (this.isDublicate(name)) {
       alert(`${name} is already in contacts.`);
       return false;
     }
@@ -72,16 +72,12 @@ class Phonebook extends Component {
     return result;
   }
 
-  isDublicate(name, number) {
+  isDublicate(name) {
     const normalizedName = name.toLowerCase();
-    const normalizedNumber = number.toLowerCase();
     const { contacts } = this.state;
 
-    const contactDubl = contacts.find(({ name, number }) => {
-      return (
-        name.toLowerCase() === normalizedName &&
-        number.toLowerCase() === normalizedNumber
-      );
+    const contactDubl = contacts.find(({ name }) => {
+      return name.toLowerCase() === normalizedName;
     });
 
     return Boolean(contactDubl);
